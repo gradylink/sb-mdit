@@ -1,11 +1,21 @@
 {
   "name": "sb-mdit",
-  "module": "index.ts",
   "type": "module",
+  "version": "0.1.1",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "@types/jsdom": "^21.1.7",
-    "@types/markdown-it": "^14.1.2"
+    "@types/markdown-it": "^14.1.2",
+    "tsup": "^8.5.0"
   },
   "peerDependencies": {
     "markdown-it": "^14.1.0",
