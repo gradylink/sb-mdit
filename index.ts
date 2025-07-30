@@ -2,10 +2,17 @@ import type { PluginSimple } from "markdown-it";
 import type { RenderRule } from "markdown-it/lib/renderer.mjs";
 import { JSDOM } from "jsdom";
 import scratchblocks from "scratchblocks/index.js";
+import scratchblocksCSS from "scratchblocks/scratch3/style.css.js";
 
 export const scratchblocksPlugin: PluginSimple = (md) => {
-  const original = md.renderer.rules.fence as RenderRule;
+  const originalRender = md.renderer.render.bind(md.renderer);
+  md.renderer.render = (tokens, options, env) => {
+    return `<style>${scratchblocksCSS}</style>${
+      originalRender.call(this, tokens, options, env)
+    }`;
+  };
 
+  const originalFence = md.renderer.rules.fence as RenderRule;
   md.renderer.rules.fence = (tokens, idx, options, env, self) => {
     if (
       tokens[idx]?.info.trim() === "sb" ||
@@ -23,6 +30,6 @@ export const scratchblocksPlugin: PluginSimple = (md) => {
         ?.innerHTML as string;
     }
 
-    return original(tokens, idx, options, env, self);
+    return originalFence(tokens, idx, options, env, self);
   };
 };
