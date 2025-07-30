@@ -4,6 +4,7 @@
     "": {
       "name": "sb-mdit",
       "dependencies": {
+        "@css-inline/css-inline": "^0.17.0",
         "canvas": "^3.1.2",
         "jsdom": "^26.1.0",
         "scratchblocks": "^3.6.4",
@@ -22,6 +23,30 @@
   },
   "packages": {
     "@asamuzakjp/css-color": ["@asamuzakjp/css-color@3.2.0", "", { "dependencies": { "@csstools/css-calc": "^2.1.3", "@csstools/css-color-parser": "^3.0.9", "@csstools/css-parser-algorithms": "^3.0.4", "@csstools/css-tokenizer": "^3.0.3", "lru-cache": "^10.4.3" } }, "sha512-K1A6z8tS3XsmCMM86xoWdn7Fkdn9m6RSVtocUrJYIwZnFVkng/PvkEoWtOWmP+Scc6saYWHWZYbndEEXxl24jw=="],
+
+    "@css-inline/css-inline": ["@css-inline/css-inline@0.17.0", "", { "optionalDependencies": { "@css-inline/css-inline-android-arm-eabi": "0.17.0", "@css-inline/css-inline-android-arm64": "0.17.0", "@css-inline/css-inline-darwin-arm64": "0.17.0", "@css-inline/css-inline-darwin-x64": "0.17.0", "@css-inline/css-inline-linux-arm-gnueabihf": "0.17.0", "@css-inline/css-inline-linux-arm64-gnu": "0.17.0", "@css-inline/css-inline-linux-arm64-musl": "0.17.0", "@css-inline/css-inline-linux-x64-gnu": "0.17.0", "@css-inline/css-inline-linux-x64-musl": "0.17.0", "@css-inline/css-inline-win32-arm64-msvc": "0.17.0", "@css-inline/css-inline-win32-x64-msvc": "0.17.0" } }, "sha512-IPZ4Z86lxacvcxlQl0jm1Hn8oiojCLrsm8qDdH6aeKstJWPeF4RhnPv15oMlW3ytsW4OHYPfknIaYBHm5rjhWg=="],
+
+    "@css-inline/css-inline-android-arm-eabi": ["@css-inline/css-inline-android-arm-eabi@0.17.0", "", { "os": "android", "cpu": "arm" }, "sha512-4Tw2OH+0Ob6RJfVqjA7Pjg2jKhLQIeDmxO2ZirD7j7o/s7JvJwkBXhOgCBIPIbl7CviLQ0FzZPPbcTs7vn/Mtw=="],
+
+    "@css-inline/css-inline-android-arm64": ["@css-inline/css-inline-android-arm64@0.17.0", "", { "os": "android", "cpu": "arm64" }, "sha512-Glbl4g27GIXWP+CbDOlGMUB9XIzrac9mU9s/VHN8dP8RDuEmxOCgA3eZVXns7/uijLSDIwQJTxjLstv3o5dTMQ=="],
+
+    "@css-inline/css-inline-darwin-arm64": ["@css-inline/css-inline-darwin-arm64@0.17.0", "", { "os": "darwin", "cpu": "arm64" }, "sha512-MQ2myM834msxt4cEl1NOp9oP3xdIJAm4Y9JUa3NASbzNPCUsPD4CoJb8x4zgeIBIswo+HJOytIOUQpRrJstxeQ=="],
+
+    "@css-inline/css-inline-darwin-x64": ["@css-inline/css-inline-darwin-x64@0.17.0", "", { "os": "darwin", "cpu": "x64" }, "sha512-cCO+tI5NSkizLxRVjAqnIv0M7y/GfhY3w68mN/wPxmUHk9NuLnvZS2M4CcYs7FLQ63eE3MQLbHuk6hRKjDCcSg=="],
+
+    "@css-inline/css-inline-linux-arm-gnueabihf": ["@css-inline/css-inline-linux-arm-gnueabihf@0.17.0", "", { "os": "linux", "cpu": "arm" }, "sha512-bqrT9HbOrXj6kpw/dGuJXgsx8id3HMtPUygxMeiy/GOB4x3/xusTRuNne6tOxWkqw/Obu86T1wy/h2SUaXnDgg=="],
+
+    "@css-inline/css-inline-linux-arm64-gnu": ["@css-inline/css-inline-linux-arm64-gnu@0.17.0", "", { "os": "linux", "cpu": "arm64" }, "sha512-1eQ4ajlcALxDACG86UcRM/n91/orMbHIw5e2NmD0+Y8nZsxXXUZJq2Rw7R2TETsOMxJC2IY12o8PS26Rw94D6A=="],
+
+    "@css-inline/css-inline-linux-arm64-musl": ["@css-inline/css-inline-linux-arm64-musl@0.17.0", "", { "os": "linux", "cpu": "arm64" }, "sha512-Sq3nhiPyVXII7qIJlGK3lHWCCNJfOSDo0fEKPi4o9iDSO1L78um9vtIUrnJe/craoeza1vJb1xd5IASmVCU0Cg=="],
+
+    "@css-inline/css-inline-linux-x64-gnu": ["@css-inline/css-inline-linux-x64-gnu@0.17.0", "", { "os": "linux", "cpu": "x64" }, "sha512-zpKlmEl8l7QCrtVP6nbfnnYuSbwSjWsZRTVG1JLcIcx5LkxLzE7d7+NIQ3C4Myb0n0SeOuGVEVAZwFNct7Ksog=="],
+
+    "@css-inline/css-inline-linux-x64-musl": ["@css-inline/css-inline-linux-x64-musl@0.17.0", "", { "os": "linux", "cpu": "x64" }, "sha512-0SxccSQa4reAekGdHsSv2VzTiG+ZTgNsnYM3lIeHRfv10n0a0/Px1KDmwe7RlHJytkH15T7Tubv8FEcjfOqZBQ=="],
+
+    "@css-inline/css-inline-win32-arm64-msvc": ["@css-inline/css-inline-win32-arm64-msvc@0.17.0", "", { "os": "win32", "cpu": "arm64" }, "sha512-DY3GAPpzjzaW2xCdelPKZM90ldrUieodTFZCQhjOODftTGf4wd5cj2741DcuDg2aqDGAZ6PtXbeysfmx+DHy3w=="],
+
+    "@css-inline/css-inline-win32-x64-msvc": ["@css-inline/css-inline-win32-x64-msvc@0.17.0", "", { "os": "win32", "cpu": "x64" }, "sha512-CDCcVgBFxaun1LZhgnOBen/DnFGIdg88k3rQ653mB4qVsfI7Kyt8V3ezYdWAN7rZKvQL/sRQG4LOVAjPsrJWgA=="],
 
     "@csstools/color-helpers": ["@csstools/color-helpers@5.0.2", "", {}, "sha512-JqWH1vsgdGcw2RR6VliXXdA0/59LttzlU8UlRT/iUUsEeWfYq8I+K0yhihEUTTHLRm1EXvpsCx3083EU15ecsA=="],
 

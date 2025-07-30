@@ -1,20 +1,17 @@
-import type { PluginWithOptions } from "markdown-it";
+import type { PluginSimple } from "markdown-it";
 import type { RenderRule } from "markdown-it/lib/renderer.mjs";
 import { JSDOM } from "jsdom";
 import scratchblocks from "scratchblocks/index.js";
 import scratchblocksCSS from "scratchblocks/scratch3/style.css.js";
+import { inlineFragment } from "@css-inline/css-inline";
 
-export const scratchblocksPlugin: PluginWithOptions<
-  { vitepress?: boolean }
-> = (md, pluginOptions) => {
-  pluginOptions = pluginOptions || {};
+export const scratchblocksPlugin: PluginSimple = (md) => {
   const originalRender = md.renderer.render.bind(md.renderer);
   md.renderer.render = (tokens, options, env) => {
-    return `${
-      pluginOptions.vitepress ? '<component is="style"' : "<style>"
-    }${scratchblocksCSS}${
-      pluginOptions.vitepress ? "</component>" : "</style>"
-    }${originalRender(tokens, options, env)}`;
+    return inlineFragment(
+      originalRender(tokens, options, env),
+      scratchblocksCSS,
+    );
   };
 
   const originalFence = md.renderer.rules.fence as RenderRule;
