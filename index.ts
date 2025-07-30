@@ -14,7 +14,7 @@ export const scratchblocksPlugin: PluginWithOptions<
       pluginOptions.vitepress ? '<component is="style"' : "<style>"
     }${scratchblocksCSS}${
       pluginOptions.vitepress ? "</component>" : "</style>"
-    }${originalRender.call(this, tokens, options, env)}`;
+    }${originalRender(tokens, options, env)}`;
   };
 
   const originalFence = md.renderer.rules.fence as RenderRule;
