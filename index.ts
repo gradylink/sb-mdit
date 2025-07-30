@@ -19,7 +19,8 @@ export const scratchblocksPlugin: PluginSimple = (md) => {
         style: "scratch3",
         languages: ["en"],
       });
-      return dom.window.document.querySelector("div.scratchblocks")?.innerHTML;
+      return dom.window.document.querySelector("div.scratchblocks")
+        ?.innerHTML as string;
     }
 
     return original(tokens, idx, options, env, self);
