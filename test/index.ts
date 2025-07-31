@@ -11,5 +11,15 @@ Some words
 \`\`\`sb
 when green flag clicked
 say [this is a test]
+\`\`\`
+
+\`\`\`sb2
+when green flag clicked
+say [this is a test]
+\`\`\`
+
+\`\`\`scratchblocks3
+when green flag clicked
+say [this is a test]
 \`\`\``),
 );
